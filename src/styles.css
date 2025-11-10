@@ -1,0 +1,323 @@
+body {
+  background-color: rgb(32, 32, 32);
+  margin : 0px;
+  font-family: roboto;
+  
+}
+
+header {
+  margin : 0px;
+  color : white;
+  font-size: 50px;
+  display: flex;
+  
+}
+
+.box {
+  background-color: #4C4C4C;
+  height: 188px;
+  width: 415px;
+  margin-top: 10px;
+  margin-left: 15px;
+  border-radius: 20px;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.headBar{
+  display: flex;
+  padding-right: 25px;
+  padding-left: 15px;
+  padding-top: 15px;
+  line-height: 30px;
+  align-items: center;
+}
+
+.serverName{   
+  color : white;
+  font-size: 24px;
+  font-weight: bold;
+
+  margin-left: 10px;
+  max-width: 200px;
+  white-space: nowrap;   /* le texte reste sur une seule ligne */
+  overflow: hidden;      /* cache le texte qui dépasse */
+  text-overflow: ellipsis; /* ajoute les ... */
+}
+
+.playersNumber{
+  width: 60px;
+  height: 28px;
+  border-radius: 15px;
+  margin-left : 15px;
+  background-color: #a3a3a3;
+  line-height: 28px;
+}
+
+.playersNumberText{
+  font-weight: bold;
+  font-size: 15px;
+  color : white;
+  text-shadow: 0px 0px 4px rgb(104, 104, 104);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.versionText{
+  font-size: 16px;
+  color : white;
+  margin-left: auto;
+}
+
+.descriptionText{
+  font-size: 16px;
+  color : white;
+  padding-right: 25px;
+  padding-left: 35px;
+  padding-top: 5px;
+}
+
+.dotStatus{
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  line-height: 28px;
+  vertical-align: center;
+}
+
+.ButtonHolder{
+  margin-top: auto;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+  font-size: 18px;
+  background-color: #008542;
+  color: #fff;
+  text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 0;
+  z-index: 1;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: unset;
+  padding: 0.4rem 0.75rem;
+  height:max-content;
+  align-self: center;
+  text-decoration: none;
+  font-weight: 900;
+  transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+
+button:before {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  z-index: -1;
+  background-color: #008542 !important;
+  box-shadow: 0 -4px rgb(21 108 0 / 50%) inset,
+    0 4px rgb(100 253 31 / 99%) inset, -4px 0 rgb(100 253 31 / 50%) inset,
+    4px 0 rgb(21 108 0 / 50%) inset;
+}
+
+button:after {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+
+button:hover:before {
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+    -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+
+button:hover:after {
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+}
+
+button:active {
+  transform: translateY(4px);
+}
+
+button:active:after {
+  box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+}
+
+
+.buttonStart{
+  margin-left: 15px;
+  width: 100px;
+  display: flex;
+}
+
+.buttonText{
+  font-size: 20px;
+}
+
+.buttonFolder{
+  margin-left:10px;
+}
+
+.buttonEdit{
+  margin-left:10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+
+.HTitle{
+  color:white;
+  size: 100px;
+  font-weight: 900;
+  margin: 15px;
+}
+
+/* Popup styles */
+#PopUp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.PopUpContent {
+  background: rgb(32, 32, 32);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  border: 2px solid #4C4C4C;
+  color: white;
+}
+
+.PopUpContent h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: white;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #4C4C4C;
+  border-radius: 10px;
+  background-color: #4C4C4C;
+  color: white;
+  box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #008542;
+}
+
+.form-group.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.form-group.checkbox label {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.form-group.checkbox input {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  accent-color: #008542;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Style des options dans le select */
+select option {
+  background-color: rgb(32, 32, 32);
+  color: white;
+  padding: 10px;
+}
+
+/* Scrollbar personnalisée */
+.PopUpContent::-webkit-scrollbar {
+  width: 10px;
+}
+
+.PopUpContent::-webkit-scrollbar-track {
+  background: rgb(32, 32, 32);
+  border-radius: 5px;
+}
+
+.PopUpContent::-webkit-scrollbar-thumb {
+  background: #4C4C4C;
+  border-radius: 5px;
+}
+
+.PopUpContent::-webkit-scrollbar-thumb:hover {
+  background: #008542;
+}

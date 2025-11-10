@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tauri App</title>
+    <script type="module" src="/main.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="HTitle">LISTE DES SERVERS</div>
+      <button id="add">+</button>
+    </header>
+    <div class="container" id="contain"></div>
+    
+    <div id="PopUp" style="display: none;">
+      <div class="PopUpContent">
+        <h2>NOUVEAU SERVER</h2>
+        
+        <div class="form-group">
+          <label>Nom</label>
+          <input id="ServerName" type="text" placeholder="Nom du server" required />
+        </div>
+        
+        <div class="form-group">
+          <label>Description</label>
+          <input id="ServerDescription" type="text" placeholder="A Minecraft Server" />
+        </div>
+        
+        <div class="form-group">
+          <label>Version</label>
+          <select id="VersionDropdown">
+            <option value="">Chargement...</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>Nombre de joueurs</label>
+          <input id="MaxPlayers" type="number" value="20" min="1" />
+        </div>
+        
+        <div class="form-group">
+          <label>Difficulté</label>
+          <select id="Difficulty">
+            <option value="peaceful">Paisible</option>
+            <option value="easy">Facile</option>
+            <option value="normal" selected>Normal</option>
+            <option value="hard">Difficile</option>
+          </select>
+        </div>
+        
+        <div class="form-group checkbox">
+          <label>
+            <input id="Whitelist" type="checkbox" />
+            Liste blanche
+          </label>
+        </div>
+        
+        <div class="form-group checkbox">
+          <label>
+            <input id="Cracked" type="checkbox" />
+            Cracké
+          </label>
+        </div>
+        
+        <div class="form-group checkbox">
+          <label>
+            <input id="AllowFlight" type="checkbox" />
+            Vol
+          </label>
+        </div>
+        
+        <div class="form-group checkbox">
+          <label>
+            <input id="ForceGamemode" type="checkbox" />
+            Forcer le mode de jeu
+          </label>
+        </div>
+        
+        <div class="form-group">
+          <label>Protection du spawn</label>
+          <input id="SpawnProtection" type="number" value="16" min="0" />
+        </div>
+        
+        <div class="button-group">
+          <button id="CreateServerBtn" class="btn-primary">Créer</button>
+          <button id="CancelBtn" class="btn-secondary">Annuler</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
